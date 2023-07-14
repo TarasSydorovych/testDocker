@@ -6,12 +6,12 @@ function App() {
   const [data, setData] = useState('');
 
   useEffect(() => {
-    fetchData();
+    fetchData('2');
   }, []);
 
-  const fetchData = async () => {
+  const fetchData = async (id) => {
     try {
-      const response = await axios.get('http://localhost:4000/data');
+      const response = await axios.get(`http://localhost:4000/data?id=${id}`);
       setData(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
