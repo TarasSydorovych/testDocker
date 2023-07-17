@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = useState('');
 
   useEffect(() => {
-    fetchData('2');
+    fetchData('1');
   }, []);
 
   const fetchData = async (id) => {

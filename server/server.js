@@ -2,8 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
-
+app.use(cors({ origin: 'http://185.230.88.166' }));
 const dbData = [
   { id: 1, name: 'John' },
   { id: 2, name: 'Jane' },
